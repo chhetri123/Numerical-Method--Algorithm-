@@ -1,11 +1,14 @@
 #include<iostream>
 #include<math.h>
-#define N 3
+
 using namespace std;
 
 int main(){
+	int N;
+	cout << "Enter the number of variable" << endl;
+	cin >> N;
 	float a[N][N+1];
-	cout << "Enter the coefficients of 3 equations: ";
+	cout << "Enter the coefficients of " <<N << "equations: ";
 	for(int i=0; i<N; i++){
 		for(int j=0; j<N+1 ; j++){
 				cin >>a[i][j];	
@@ -46,17 +49,21 @@ for (int i = N-1; i >=0;i--){
 
 
 // Display in matrix form 
+cout<<"*******************************"<<endl;
 	for (int i = 0; i < N; i++)
 	{
 		for(int j=0; j<N+1; j++){
 				cout << a[i][j]<<" ";
-
 		}
 		cout << "\n";
 	}
+	cout<<"*******************************"<<endl;
+
 
 	for (int i = 0; i < N;i++){
-		cout << x[i] << endl;
+		cout <<"x"<<i+1<<" = "<< x[i] << endl;
 	}
 	return 0; 
 }
+
+
